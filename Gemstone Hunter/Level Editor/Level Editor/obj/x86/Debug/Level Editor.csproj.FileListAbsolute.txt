@@ -1,0 +1,33 @@
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\obj\x86\Debug\Level Editor.csprojResolveAssemblyReference.cache
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\obj\x86\Debug\Level_Editor.MapEditor.resources
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\obj\x86\Debug\Level Editor.csproj.GenerateResource.Cache
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Fonts\Pericles8.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Gem.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\PlatformTiles.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Gem.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterA\Die.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterA\Idle.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterA\Run.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterB\Die.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterB\Idle.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterB\Run.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterC\Die.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterC\Idle.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterC\Run.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterD\Die.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterD\Idle.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterD\Run.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Celebrate.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Die.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Idle.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Jump.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Run.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\TitleScreen.xnb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Level Editor.exe
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Level Editor.pdb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Tile Engine.dll
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Tile Engine.pdb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\obj\x86\Debug\Level Editor.exe
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\obj\x86\Debug\Level Editor.pdb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\PlatformTiles.png

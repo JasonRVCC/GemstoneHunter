@@ -1,0 +1,6 @@
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Tile Engine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Tile Engine\bin\x86\Debug\Tile Engine.dll
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Tile Engine\bin\x86\Debug\Tile Engine.pdb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Tile Engine\obj\x86\Debug\Tile Engine.dll
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Tile Engine\obj\x86\Debug\Tile Engine.pdb
+C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Tile Engine\obj\x86\Debug\Tile Engine.csprojResolveAssemblyReference.cache
