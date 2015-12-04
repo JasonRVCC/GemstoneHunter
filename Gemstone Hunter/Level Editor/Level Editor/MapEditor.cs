@@ -72,6 +72,8 @@ namespace Level_Editor
 
             cboMapNumber.SelectedIndex = 0;
             TileMap.EditorMode = true;
+
+            backgroundToolStripMenuItem.Checked = true;
         }
 
         private void FixScrollBarScales()
@@ -121,6 +123,88 @@ namespace Level_Editor
                     txtNewCode.Enabled = true;
                     break;
             }
+        }
+
+        private void listTiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listTiles.SelectedIndices.Count > 0)
+            { game.DrawTile = listTiles.SelectedIndices[0]; }
+        }
+
+        private void radioPassable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioPassable.Checked)
+            { game.EditingCode = false; }
+            else
+            { game.EditingCode = true; }
+        }
+
+        private void radioCode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioPassable.Checked)
+            { game.EditingCode = false; }
+            else
+            { game.EditingCode = true; }
+        }
+
+        private void txtNewCode_TextChanged(object sender, EventArgs e)
+        {
+            game.CurrentCodeValue = txtNewCode.Text;
+        }
+
+        private void backgroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game.DrawLayer = 0;
+            backgroundToolStripMenuItem.Checked = true;
+            interactiveToolStripMenuItem.Checked = false;
+            foregroundToolStripMenuItem.Checked = false;
+        }
+
+        private void interactiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game.DrawLayer = 2;
+            backgroundToolStripMenuItem.Checked = false;
+            interactiveToolStripMenuItem.Checked = false;
+            foregroundToolStripMenuItem.Checked = true;
+        }
+
+        private void timerGameUpdate_Tick(object sender, EventArgs e)
+        {
+            if (hScrollBar1.Maximum < 0)
+            { FixScrollBarScales(); }
+            game.Tick();
+            if (game.HoverCodeValue != lblCurrentCode.Text)
+            { lblCurrentCode.Text = game.HoverCodeValue; }
+        }
+
+        private void loadMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TileMap.LoadMap(new FileStream(Application.StartupPath + @"\MAP" +
+                    cboMapNumber.Items[cboMapNumber.SelectedIndex] + ".MAP", FileMode.Open));
+            }
+            catch
+            {
+                System.Diagnostics.Debug.Print("Unable to load map file");
+            }
+        }
+
+        private void saveMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TileMap.SaveMap(new FileStream(Application.StartupPath + @"\MAP" +
+                    cboMapNumber.Items[cboMapNumber.SelectedIndex] + ".MAP", FileMode.Create));
+        }
+
+        private void clearMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TileMap.ClearMap();
+        }
+
+        private void MapEditor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            game.Exit();
+            Application.Exit();
         }
     }
 }

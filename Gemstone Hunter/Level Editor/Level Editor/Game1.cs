@@ -26,6 +26,16 @@ namespace Level_Editor
 
         System.Windows.Forms.Control gameForm;
 
+        public int DrawLayer = 0;
+        public int DrawTile = 0;
+        public bool EditingCode = false;
+        public string CurrentCodeValue = "";
+        public string HoverCodeValue = "";
+
+        public MouseState lastMouseState;
+        System.Windows.Forms.VScrollBar vscroll;
+        System.Windows.Forms.HScrollBar hscroll;
+
         public Game1(IntPtr drawSurface, System.Windows.Forms.Form parentForm, 
             System.Windows.Forms.PictureBox pictureBox)
         {
@@ -44,6 +54,10 @@ namespace Level_Editor
             gameForm = System.Windows.Forms.Control.FromHandle(this.Window.Handle);
             gameForm.VisibleChanged += new EventHandler(gameForm_VisibleChanged);
             gameForm.SizeChanged += new EventHandler(pictureBox_SizeChanged);
+
+            vscroll = (System.Windows.Forms.VScrollBar)parentForm.Controls["vScrollBar1"];
+
+            hscroll = (System.Windows.Forms.HScrollBar)parentForm.Controls["hScrollBar1"];
         }
 
         #region Event Handlers
@@ -95,7 +109,15 @@ namespace Level_Editor
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            Camera.ViewPortWidth = pictureBox.Width;
+            Camera.ViewPortHeight = pictureBox.Height;
+            Camera.WorldRectangle = new Rectangle(0, 0, TileMap.TileWidth * TileMap.MapWidth,
+                TileMap.TileHeight * TileMap.MapHeight);
+
+            TileMap.Initialize(Content.Load<Texture2D>(@"Textures\PlatformTiles"));
+            TileMap.spriteFont = Content.Load<SpriteFont>(@"Fonts\Pericles8");
+            lastMouseState = Mouse.GetState();
+            pictureBox_SizeChanged(null, null);
         }
 
         /// <summary>
@@ -114,12 +136,38 @@ namespace Level_Editor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
-            // TODO: Add your update logic here
-
+            Camera.Position = new Vector2(hscroll.Value, vscroll.Value);
+            MouseState ms = Mouse.GetState();
+            if ((ms.X > 0) && (ms.Y > 0) && (ms.X < Camera.ViewPortWidth) &&
+                (ms.Y < Camera.ViewPortHeight))
+            {
+                Vector2 mouseLoc = Camera.ScreenToWorld(new Vector2(ms.X, ms.Y));
+                if(Camera.WorldRectangle.Contains((int)mouseLoc.X, (int)mouseLoc.Y))
+                {
+                    if (ms.LeftButton == ButtonState.Pressed)
+                    {
+                        TileMap.SetTileAtCell(TileMap.GetCellByPixelX((int)mouseLoc.X),
+                            TileMap.GetCellByPixelY((int)mouseLoc.Y), DrawLayer, DrawTile);
+                    }
+                    if((ms.RightButton == ButtonState.Pressed) && 
+                        (lastMouseState.RightButton == ButtonState.Released))
+                    {
+                        if(EditingCode)
+                        {
+                            TileMap.GetMapSquareAtCell(TileMap.GetCellByPixelX((int)mouseLoc.X),
+                                TileMap.GetCellByPixelY((int)mouseLoc.Y)).CodeValue = CurrentCodeValue;
+                        }
+                        else
+                        {
+                            TileMap.GetMapSquareAtCell(TileMap.GetCellByPixelX((int)mouseLoc.X),
+                                TileMap.GetCellByPixelY((int)mouseLoc.Y)).TogglePassable();
+                        }
+                    }
+                    HoverCodeValue = TileMap.GetMapSquareAtCell(TileMap.GetCellByPixelX((int)mouseLoc.X),
+                                TileMap.GetCellByPixelY((int)mouseLoc.Y)).CodeValue;
+                }
+            }
+            lastMouseState = ms;
             base.Update(gameTime);
         }
 
@@ -131,7 +179,10 @@ namespace Level_Editor
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            TileMap.Draw(spriteBatch);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

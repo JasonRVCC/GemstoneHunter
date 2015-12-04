@@ -177,6 +177,41 @@ namespace Tile_Engine
         }
         #endregion
 
+        #region Loading and Saving Maps
+        public static void SaveMap(FileStream fileStream)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(fileStream, mapCells);
+            fileStream.Close();
+        }
+
+        public static void LoadMap(FileStream fileStream)
+        {
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                mapCells = (MapSquare[,])formatter.Deserialize(fileStream);
+                fileStream.Close();
+            }
+            catch
+            {
+                ClearMap();
+            }
+        }
+
+        public static void ClearMap()
+        {
+            for (int x = 0; x < MapWidth; x++)
+            {
+                for (int y = 0; y < MapHeight; y++)
+                {
+                    for (int z = 0; z < MapLayers; z++)
+                    { mapCells[x, y] = new MapSquare(2, 0, 0, "", true); }
+                }
+            }
+        }
+        #endregion
+
         #region Drawing
         static public void Draw(SpriteBatch spriteBatch)
         {

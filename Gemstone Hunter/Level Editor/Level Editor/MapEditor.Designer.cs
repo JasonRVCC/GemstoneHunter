@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pctSurface = new System.Windows.Forms.PictureBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,18 +41,20 @@
             this.backgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.interactiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foregroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pctSurface = new System.Windows.Forms.PictureBox();
             this.imgListTiles = new System.Windows.Forms.ImageList(this.components);
             this.listTiles = new System.Windows.Forms.ListView();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.groupBoxRightClick = new System.Windows.Forms.GroupBox();
-            this.radioPassable = new System.Windows.Forms.RadioButton();
-            this.radioCode = new System.Windows.Forms.RadioButton();
-            this.txtNewCode = new System.Windows.Forms.TextBox();
-            this.lblCurrentCode = new System.Windows.Forms.Label();
             this.cboCodeValues = new System.Windows.Forms.ComboBox();
+            this.lblCurrentCode = new System.Windows.Forms.Label();
+            this.txtNewCode = new System.Windows.Forms.TextBox();
+            this.radioCode = new System.Windows.Forms.RadioButton();
+            this.radioPassable = new System.Windows.Forms.RadioButton();
             this.lblMapNumber = new System.Windows.Forms.Label();
             this.cboMapNumber = new System.Windows.Forms.ComboBox();
+            this.timerGameUpdate = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSurface)).BeginInit();
             this.groupBoxRightClick.SuspendLayout();
@@ -71,17 +72,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // pctSurface
-            // 
-            this.pctSurface.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctSurface.Location = new System.Drawing.Point(184, 27);
-            this.pctSurface.Name = "pctSurface";
-            this.pctSurface.Size = new System.Drawing.Size(471, 576);
-            this.pctSurface.TabIndex = 1;
-            this.pctSurface.TabStop = false;
-            // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -98,12 +88,14 @@
             this.loadMapToolStripMenuItem.Name = "loadMapToolStripMenuItem";
             this.loadMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadMapToolStripMenuItem.Text = "&Load Map";
+            this.loadMapToolStripMenuItem.Click += new System.EventHandler(this.loadMapToolStripMenuItem_Click);
             // 
             // saveMapToolStripMenuItem
             // 
             this.saveMapToolStripMenuItem.Name = "saveMapToolStripMenuItem";
             this.saveMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveMapToolStripMenuItem.Text = "&Save Map";
+            this.saveMapToolStripMenuItem.Click += new System.EventHandler(this.saveMapToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -130,6 +122,7 @@
             this.clearMapToolStripMenuItem.Name = "clearMapToolStripMenuItem";
             this.clearMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clearMapToolStripMenuItem.Text = "&Clear Map";
+            this.clearMapToolStripMenuItem.Click += new System.EventHandler(this.clearMapToolStripMenuItem_Click);
             // 
             // layerToolStripMenuItem
             // 
@@ -146,6 +139,7 @@
             this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
             this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.backgroundToolStripMenuItem.Text = "&Background";
+            this.backgroundToolStripMenuItem.Click += new System.EventHandler(this.backgroundToolStripMenuItem_Click);
             // 
             // interactiveToolStripMenuItem
             // 
@@ -158,6 +152,17 @@
             this.foregroundToolStripMenuItem.Name = "foregroundToolStripMenuItem";
             this.foregroundToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.foregroundToolStripMenuItem.Text = "&Foreground";
+            // 
+            // pctSurface
+            // 
+            this.pctSurface.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctSurface.Location = new System.Drawing.Point(184, 27);
+            this.pctSurface.Name = "pctSurface";
+            this.pctSurface.Size = new System.Drawing.Size(471, 576);
+            this.pctSurface.TabIndex = 1;
+            this.pctSurface.TabStop = false;
             // 
             // imgListTiles
             // 
@@ -177,6 +182,7 @@
             this.listTiles.TileSize = new System.Drawing.Size(48, 48);
             this.listTiles.UseCompatibleStateImageBehavior = false;
             this.listTiles.View = System.Windows.Forms.View.Tile;
+            this.listTiles.SelectedIndexChanged += new System.EventHandler(this.listTiles_SelectedIndexChanged);
             // 
             // vScrollBar1
             // 
@@ -212,17 +218,32 @@
             this.groupBoxRightClick.TabStop = false;
             this.groupBoxRightClick.Text = "Right Click Mode";
             // 
-            // radioPassable
+            // cboCodeValues
             // 
-            this.radioPassable.AutoSize = true;
-            this.radioPassable.Checked = true;
-            this.radioPassable.Location = new System.Drawing.Point(6, 17);
-            this.radioPassable.Name = "radioPassable";
-            this.radioPassable.Size = new System.Drawing.Size(104, 17);
-            this.radioPassable.TabIndex = 0;
-            this.radioPassable.TabStop = true;
-            this.radioPassable.Text = "Toggle Passable";
-            this.radioPassable.UseVisualStyleBackColor = true;
+            this.cboCodeValues.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCodeValues.FormattingEnabled = true;
+            this.cboCodeValues.Location = new System.Drawing.Point(5, 75);
+            this.cboCodeValues.Name = "cboCodeValues";
+            this.cboCodeValues.Size = new System.Drawing.Size(160, 21);
+            this.cboCodeValues.TabIndex = 4;
+            this.cboCodeValues.SelectedIndexChanged += new System.EventHandler(this.cboCodeValues_SelectedIndexChanged);
+            // 
+            // lblCurrentCode
+            // 
+            this.lblCurrentCode.AutoSize = true;
+            this.lblCurrentCode.Location = new System.Drawing.Point(60, 59);
+            this.lblCurrentCode.Name = "lblCurrentCode";
+            this.lblCurrentCode.Size = new System.Drawing.Size(13, 13);
+            this.lblCurrentCode.TabIndex = 3;
+            this.lblCurrentCode.Text = "--";
+            // 
+            // txtNewCode
+            // 
+            this.txtNewCode.Location = new System.Drawing.Point(62, 36);
+            this.txtNewCode.Name = "txtNewCode";
+            this.txtNewCode.Size = new System.Drawing.Size(103, 20);
+            this.txtNewCode.TabIndex = 2;
+            this.txtNewCode.TextChanged += new System.EventHandler(this.txtNewCode_TextChanged);
             // 
             // radioCode
             // 
@@ -234,32 +255,20 @@
             this.radioCode.TabStop = true;
             this.radioCode.Text = "Code";
             this.radioCode.UseVisualStyleBackColor = true;
+            this.radioCode.CheckedChanged += new System.EventHandler(this.radioCode_CheckedChanged);
             // 
-            // txtNewCode
+            // radioPassable
             // 
-            this.txtNewCode.Location = new System.Drawing.Point(62, 36);
-            this.txtNewCode.Name = "txtNewCode";
-            this.txtNewCode.Size = new System.Drawing.Size(103, 20);
-            this.txtNewCode.TabIndex = 2;
-            // 
-            // lblCurrentCode
-            // 
-            this.lblCurrentCode.AutoSize = true;
-            this.lblCurrentCode.Location = new System.Drawing.Point(60, 59);
-            this.lblCurrentCode.Name = "lblCurrentCode";
-            this.lblCurrentCode.Size = new System.Drawing.Size(13, 13);
-            this.lblCurrentCode.TabIndex = 3;
-            this.lblCurrentCode.Text = "--";
-            // 
-            // cboCodeValues
-            // 
-            this.cboCodeValues.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCodeValues.FormattingEnabled = true;
-            this.cboCodeValues.Location = new System.Drawing.Point(5, 75);
-            this.cboCodeValues.Name = "cboCodeValues";
-            this.cboCodeValues.Size = new System.Drawing.Size(160, 21);
-            this.cboCodeValues.TabIndex = 4;
-            this.cboCodeValues.SelectedIndexChanged += new System.EventHandler(this.cboCodeValues_SelectedIndexChanged);
+            this.radioPassable.AutoSize = true;
+            this.radioPassable.Checked = true;
+            this.radioPassable.Location = new System.Drawing.Point(6, 17);
+            this.radioPassable.Name = "radioPassable";
+            this.radioPassable.Size = new System.Drawing.Size(104, 17);
+            this.radioPassable.TabIndex = 0;
+            this.radioPassable.TabStop = true;
+            this.radioPassable.Text = "Toggle Passable";
+            this.radioPassable.UseVisualStyleBackColor = true;
+            this.radioPassable.CheckedChanged += new System.EventHandler(this.radioPassable_CheckedChanged);
             // 
             // lblMapNumber
             // 
@@ -279,6 +288,12 @@
             this.cboMapNumber.Size = new System.Drawing.Size(94, 21);
             this.cboMapNumber.TabIndex = 7;
             // 
+            // timerGameUpdate
+            // 
+            this.timerGameUpdate.Enabled = true;
+            this.timerGameUpdate.Interval = 20;
+            this.timerGameUpdate.Tick += new System.EventHandler(this.timerGameUpdate_Tick);
+            // 
             // MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,8 +308,12 @@
             this.Controls.Add(this.pctSurface);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(700, 670);
+            this.MinimumSize = new System.Drawing.Size(700, 670);
             this.Name = "MapEditor";
             this.Text = "MapEditor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MapEditor_FormClosed);
             this.Load += new System.EventHandler(this.MapEditor_Load);
             this.Resize += new System.EventHandler(this.MapEditor_Resize);
             this.menuStrip1.ResumeLayout(false);
@@ -334,5 +353,6 @@
         private System.Windows.Forms.RadioButton radioPassable;
         private System.Windows.Forms.Label lblMapNumber;
         private System.Windows.Forms.ComboBox cboMapNumber;
+        private System.Windows.Forms.Timer timerGameUpdate;
     }
 }
