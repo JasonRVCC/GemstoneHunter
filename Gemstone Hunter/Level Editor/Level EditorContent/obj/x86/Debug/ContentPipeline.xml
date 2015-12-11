@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Fonts\Pericles8.xnb</Output>
-      <Time>2015-12-04T09:37:33.0260552-05:00</Time>
+      <Time>2015-12-11T11:30:12.6121413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Gem.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Gem.xnb</Output>
-      <Time>2015-12-04T09:37:33.034056-05:00</Time>
+      <Time>2015-12-11T11:30:12.6181413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\PlatformTiles.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\PlatformTiles.xnb</Output>
-      <Time>2015-12-04T09:37:33.0360562-05:00</Time>
+      <Time>2015-12-11T11:30:12.6191413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Gem.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Gem.xnb</Output>
-      <Time>2015-12-04T09:37:33.0380564-05:00</Time>
+      <Time>2015-12-11T11:30:12.6201413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterA\Die.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterA\Die.xnb</Output>
-      <Time>2015-12-04T09:37:33.0390565-05:00</Time>
+      <Time>2015-12-11T11:30:12.6211413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterA\Idle.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterA\Idle.xnb</Output>
-      <Time>2015-12-04T09:37:33.0400566-05:00</Time>
+      <Time>2015-12-11T11:30:12.6231413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterA\Run.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterA\Run.xnb</Output>
-      <Time>2015-12-04T09:37:33.0410567-05:00</Time>
+      <Time>2015-12-11T11:30:12.6231413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterB\Die.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterB\Die.xnb</Output>
-      <Time>2015-12-04T09:37:33.0420568-05:00</Time>
+      <Time>2015-12-11T11:30:12.6251413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterB\Idle.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterB\Idle.xnb</Output>
-      <Time>2015-12-04T09:37:33.044057-05:00</Time>
+      <Time>2015-12-11T11:30:12.6281413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterB\Run.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterB\Run.xnb</Output>
-      <Time>2015-12-04T09:37:33.0450571-05:00</Time>
+      <Time>2015-12-11T11:30:12.6291413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterC\Die.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterC\Die.xnb</Output>
-      <Time>2015-12-04T09:37:33.0470573-05:00</Time>
+      <Time>2015-12-11T11:30:12.6301413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterC\Idle.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterC\Idle.xnb</Output>
-      <Time>2015-12-04T09:37:33.0480574-05:00</Time>
+      <Time>2015-12-11T11:30:12.6321413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterC\Run.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterC\Run.xnb</Output>
-      <Time>2015-12-04T09:37:33.0490575-05:00</Time>
+      <Time>2015-12-11T11:30:12.6331413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterD\Die.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterD\Die.xnb</Output>
-      <Time>2015-12-04T09:37:33.0510577-05:00</Time>
+      <Time>2015-12-11T11:30:12.6351413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterD\Idle.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterD\Idle.xnb</Output>
-      <Time>2015-12-04T09:37:33.0520578-05:00</Time>
+      <Time>2015-12-11T11:30:12.6361413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\MonsterD\Run.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\MonsterD\Run.xnb</Output>
-      <Time>2015-12-04T09:37:33.0530579-05:00</Time>
+      <Time>2015-12-11T11:30:12.6371413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Player\Celebrate.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Celebrate.xnb</Output>
-      <Time>2015-12-04T09:37:33.0560582-05:00</Time>
+      <Time>2015-12-11T11:30:12.6381413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Player\Die.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Die.xnb</Output>
-      <Time>2015-12-04T09:37:33.0570583-05:00</Time>
+      <Time>2015-12-11T11:30:12.6401413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Player\Idle.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Idle.xnb</Output>
-      <Time>2015-12-04T09:37:33.0580584-05:00</Time>
+      <Time>2015-12-11T11:30:12.6411413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Player\Jump.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Jump.xnb</Output>
-      <Time>2015-12-04T09:37:33.0600586-05:00</Time>
+      <Time>2015-12-11T11:30:12.6421413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Player\Run.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\Sprites\Player\Run.xnb</Output>
-      <Time>2015-12-04T09:37:33.0620588-05:00</Time>
+      <Time>2015-12-11T11:30:12.6431413-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\TitleScreen.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\G00136378\Desktop\GitHub\GemstoneHunter\Gemstone Hunter\Level Editor\Level Editor\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
-      <Time>2015-12-04T09:37:33.0680594-05:00</Time>
+      <Time>2015-12-11T11:30:12.6501413-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

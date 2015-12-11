@@ -68,7 +68,7 @@
             this.layerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -146,12 +146,14 @@
             this.interactiveToolStripMenuItem.Name = "interactiveToolStripMenuItem";
             this.interactiveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.interactiveToolStripMenuItem.Text = "&Interactive";
+            this.interactiveToolStripMenuItem.Click += new System.EventHandler(this.interactiveToolStripMenuItem_Click);
             // 
             // foregroundToolStripMenuItem
             // 
             this.foregroundToolStripMenuItem.Name = "foregroundToolStripMenuItem";
             this.foregroundToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.foregroundToolStripMenuItem.Text = "&Foreground";
+            this.foregroundToolStripMenuItem.Click += new System.EventHandler(this.foregroundToolStripMenuItem_Click);
             // 
             // pctSurface
             // 
@@ -160,7 +162,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pctSurface.Location = new System.Drawing.Point(184, 27);
             this.pctSurface.Name = "pctSurface";
-            this.pctSurface.Size = new System.Drawing.Size(471, 576);
+            this.pctSurface.Size = new System.Drawing.Size(1051, 706);
             this.pctSurface.TabIndex = 1;
             this.pctSurface.TabStop = false;
             // 
@@ -189,9 +191,9 @@
             this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.vScrollBar1.LargeChange = 48;
-            this.vScrollBar1.Location = new System.Drawing.Point(658, 27);
+            this.vScrollBar1.Location = new System.Drawing.Point(1238, 27);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 576);
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 706);
             this.vScrollBar1.TabIndex = 3;
             // 
             // hScrollBar1
@@ -199,9 +201,9 @@
             this.hScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hScrollBar1.LargeChange = 48;
-            this.hScrollBar1.Location = new System.Drawing.Point(184, 606);
+            this.hScrollBar1.Location = new System.Drawing.Point(184, 736);
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(474, 17);
+            this.hScrollBar1.Size = new System.Drawing.Size(1054, 17);
             this.hScrollBar1.TabIndex = 4;
             // 
             // groupBoxRightClick
@@ -298,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 632);
+            this.ClientSize = new System.Drawing.Size(1264, 762);
             this.Controls.Add(this.cboMapNumber);
             this.Controls.Add(this.lblMapNumber);
             this.Controls.Add(this.groupBoxRightClick);
@@ -309,8 +311,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 670);
-            this.MinimumSize = new System.Drawing.Size(700, 670);
+            this.MaximumSize = new System.Drawing.Size(1280, 800);
+            this.MinimumSize = new System.Drawing.Size(1280, 800);
             this.Name = "MapEditor";
             this.Text = "MapEditor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MapEditor_FormClosed);

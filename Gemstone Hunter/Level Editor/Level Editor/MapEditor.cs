@@ -160,14 +160,6 @@ namespace Level_Editor
             foregroundToolStripMenuItem.Checked = false;
         }
 
-        private void interactiveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            game.DrawLayer = 2;
-            backgroundToolStripMenuItem.Checked = false;
-            interactiveToolStripMenuItem.Checked = false;
-            foregroundToolStripMenuItem.Checked = true;
-        }
-
         private void timerGameUpdate_Tick(object sender, EventArgs e)
         {
             if (hScrollBar1.Maximum < 0)
@@ -205,6 +197,22 @@ namespace Level_Editor
         {
             game.Exit();
             Application.Exit();
+        }
+
+        private void foregroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game.DrawLayer = 2;
+            backgroundToolStripMenuItem.Checked = false;
+            interactiveToolStripMenuItem.Checked = false;
+            foregroundToolStripMenuItem.Checked = true;
+        }
+
+        private void interactiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game.DrawLayer = 1;
+            backgroundToolStripMenuItem.Checked = false;
+            interactiveToolStripMenuItem.Checked = true;
+            foregroundToolStripMenuItem.Checked = false;
         }
     }
 }
